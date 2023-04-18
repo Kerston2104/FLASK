@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Login.css') }}">
+
+</head>
+<body>
+  <form method="post" action="/login">
+    <div class="imgcontainer">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZhoF76o9Tz2M1UynYnEl8203DGbK_isGM4A&usqp=CAU" alt="Avatar" class="avatar">
+      </div>
+  
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+  
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+      <h6>{{msg}}</h6>
+      <button type="submit">Login</button>
+      
+    </div>
+
+    
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <a href="{{url_for('home')}}" type="button" class="cancelbtn">Cancel</a>
+      <span class="psw">Don't have an account yet <a href="{{url_for('signup')}}">sign up?</a></span>
+    </div>
+  </form>
+</body>
+</html>
